@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Weather_web_app</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+
+            <h1>Weather Web Application</h1>
+
+            <!-- Dark Mode Toggle -->
+            <p>
+                <label for="themeToggle">Theme</label>
+                <input type="checkbox" id="themeToggle">
+            </p>
+            <span class="slider"></span>
+            <button id="searchBtn">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+            <label for="Searchbar"></label>
+
+            <input type="text" id="Searchbar" placeholder="Search for city" />
+
+        </div>
+        <br>
+        <br>
+
+
+
+        <div class="table">
+            <h3>
+                CityName
+            </h3>
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Temperature <select id="temperaturereading">
+                                <option value="C" selected>&deg;C</option>
+                                <option value="F">&deg;F</option>
+
+                            </select>
+                        </th>
+
+                        <th class="Weather">Weather</th>
+                        <th>Humidity</th>
+                        <th>WindSpeed</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="Tablebody">
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <aside class="History">
+        <h3>
+            History
+        </h3>
+    </aside>
+    <script src="app.js"></script>
+</body>
+
+</html>
