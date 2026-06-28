@@ -28,3 +28,10 @@ body {
 .table {
     display: none;
 }
+
+.history {
+    position: absolute;
+    left: 75%;
+    top: 20px;
+    width: 25%;
+}
