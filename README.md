@@ -145,91 +145,45 @@ The application is optimized for:
 
 ---
 
-## 📷 Screenshots
+## 📸 Screenshots
 
-### 🏠 Initial Page
-![Initial Page](assets/screenshots/Intial_page.png)
+### Initial Page
+![Initial Page](asserts/screenshots/Intial_page.png)
 
-Displays the default home screen of the application before searching for a city.
+### Dark Theme
+![Dark Theme](asserts/screenshots/Dark_theme.png)
 
----
+### Weather Details
+![Weather Details](asserts/screenshots/more_examples.png)
 
-### 🌞 Light Theme
-![Light Theme](assets/screenshots/Responsive_light_theme.png)
+### Dark Theme Example
+![Dark Theme Example](asserts/screenshots/more_examples_dark_theme.png)
 
-Responsive layout in Light Mode.
+### Light Theme Example
+![Light Theme Example](asserts/screenshots/example_light_theme.png)
 
----
+### Dark Theme Example
+![Dark Theme Example](asserts/screenshots/example_dark_theme.png)
 
-### 🌙 Dark Theme
-![Dark Theme](assets/screenshots/Dark_theme.png)
+### City Not Found
+![City Not Found](asserts/screenshots/city_not_found.png)
 
-Responsive layout in Dark Mode.
+### Without City
+![Without City](asserts/screenshots/without_city.png)
 
----
+### Responsive Light Theme
+![Responsive Light Theme](asserts/screenshots/Responsive_light_theme.png)
 
-### 🌞 Example - Light Theme
-![Example Light Theme](assets/screenshots/example_light_theme.png)
+### Responsive History Display
+![Responsive History](asserts/screenshots/Responsive_history_display.png)
 
-Example weather search displayed in Light Mode.
+### Responsive History Display Dark
+![Responsive History Dark](asserts/screenshots/Responsive_history_display_dark.png)
 
----
+### History Dark Theme
+![History Dark Theme](asserts/screenshots/history_dark_theme.png)
 
-### 🌙 Example - Dark Theme
-![Example Dark Theme](assets/screenshots/example_dark_theme.png)
-
-Example weather search displayed in Dark Mode.
-
----
-
-### 📜 Search History (Dark Theme)
-![History Dark Theme](assets/screenshots/history_dark_theme.png)
-
-Displays the saved search history while using Dark Mode.
-
----
-
-### 📱 Responsive History Panel
-![Responsive History](assets/screenshots/Responsive_history_display.png)
-
-History panel layout on responsive devices.
-
----
-
-### 📱 Responsive History Panel (Dark Theme)
-![Responsive History Dark](assets/screenshots/Responsive_history_display_dark.png)
-
-Responsive history panel in Dark Mode.
-
----
-
-### ➕ More Weather Examples
-![More Examples](assets/screenshots/more_examples.png)
-
-Additional weather search results.
-
----
-
-### ➕ More Examples (Dark Theme)
-![More Examples Dark](assets/screenshots/more_examples_dark_theme.png)
-
-Additional weather results displayed in Dark Mode.
-
----
-
-### ❌ City Not Found
-![City Not Found](assets/screenshots/city_not_found.png)
-
-Displays an error message when an invalid or unavailable city is searched.
-
----
-
-### ⚠️ Empty Search Validation
-![Without City](assets/screenshots/without_city.png)
-
-Validation alert shown when the search button is pressed without entering a city name.
-## 👨‍💻 Author
-
+## Author
 **Aravapalli Bhanu Venkata Naga Sai**
 
 GitHub:
