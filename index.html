@@ -4,76 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-    <!--icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Weather_web_app</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
 
-            <h1>Weather Web Application</h1>
+    <div class="app">
 
-            <!-- Dark Mode Toggle -->
-            <p>
-                <label for="themeToggle">Theme</label>
-                <input type="checkbox" id="themeToggle">
-            </p>
-            <span class="slider"></span>
-            <button id="searchBtn">
+        <section class="weather-section">
 
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="overlay">
 
-            </button>
-            <label for="Searchbar"></label>
+                <header class="top-bar">
 
-            <input type="text" id="Searchbar" placeholder="Search for city" />
+                    <h1>Weather App</h1>
 
-        </div>
-        <br>
-        <br>
+                    <div class="top-icons">
 
+                        <button id="historyBtn">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </button>
 
+                        <label class="switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="slider"></span>
+                        </label>
 
-        <div class="table">
-            <h3>
-                CityName
-            </h3>
-            <table>
+                    </div>
 
-                <thead>
+                </header>
 
-                    <tr>
+                <div class="search-container">
 
-                        <th>Temperature <select id="temperaturereading">
-                                <option value="C" selected>&deg;C</option>
-                                <option value="F">&deg;F</option>
+                    <input type="text" id="cityInput" placeholder="Search city">
 
-                            </select>
-                        </th>
+                    <button id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
 
-                        <th class="Weather">Weather</th>
-                        <th>Humidity</th>
-                        <th>WindSpeed</th>
-                    </tr>
+                </div>
 
-                </thead>
+                <div class="table" id="weatherTable">
 
-                <tbody id="Tablebody">
+                    <table>
 
-                </tbody>
+                        <thead>
+                            <tr>
+                                <th>City</th>
+                                <th>Temperature</th>
+                                <th>Weather</th>
+                                <th>Humidity</th>
+                                <th>Wind</th>
+                            </tr>
+                        </thead>
 
-            </table>
-        </div>
+                        <tbody id="tableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <aside class="history" id="historyPanel">
+
+            <h2>History</h2>
+
+            <ul id="historyList"></ul>
+
+        </aside>
+
     </div>
-    <div class="History">
-        <h3>
-            <i class="fa-solid fa-clock-rotate-left"></i>
-            History
-        </h3>
-    </div>
+
     <script src="app.js"></script>
 </body>
 

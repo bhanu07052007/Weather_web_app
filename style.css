@@ -1,37 +1,220 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80");
-    background-size: 75%;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    transition: .3s;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 75% 25%;
     height: 100vh;
 }
 
-.container {
-    max-width: 400px;
-    margin: 40px 360px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+.weather-section {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+}
+
+.overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: #0a0000;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.top-icons button {
+    background: rgba(255, 255, 255, .25);
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search-container {
+    margin-top: 30px;
+    width: 420px;
+    display: flex;
+    background: rgba(255, 255, 255, .25);
+    backdrop-filter: blur(12px);
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+
+.search-container input::placeholder {
+    color: #000;
+}
+
+.search-container button {
+    width: 70px;
+    border: none;
+    background: transparent;
+    color: #000;
+    cursor: pointer;
 }
 
 .table {
     display: none;
+    margin-top: 40px;
+    width: 85%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 .history {
+    background: #fff;
+    padding: 20px;
+    overflow: auto;
+}
+
+.history h2 {
+    margin-bottom: 20px;
+}
+
+.history li {
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.switch {
+    position: relative;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
     position: absolute;
-    left: 75%;
-    top: 20px;
-    width: 25%;
+    inset: 0;
+    background: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    background: #fff;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    transition: .3s;
+}
+
+input:checked+.slider {
+    background: #4caf50;
+}
+
+input:checked+.slider:before {
+    transform: translateX(27px);
+}
+
+body.dark {
+    background: #111;
+    color: #fff;
+}
+
+body.dark .history {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+body.dark .table {
+    background: #222;
+    color: #fff;
+}
+
+body.dark th,
+body.dark td {
+    border-color: #444;
+}
+
+body.dark .search-container {
+    background: rgba(255, 255, 255, .45);
+}
+
+@media(max-width:1024px) {
+    .app {
+        grid-template-columns: 50% 50%;
+    }
+
+    .search-container {
+        width: 90%;
+    }
+}
+
+@media(max-width:768px) {
+    .app {
+        grid-template-columns: 100%;
+    }
+
+    .history {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 75%;
+        height: 100%;
+        transition: .4s;
+        z-index: 10;
+        box-shadow: -4px 0 15px rgba(0, 0, 0, .3);
+    }
+
+    .history.show {
+        right: 0;
+    }
+
+    .search-container {
+        width: 90%;
+    }
 }
